@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Operadoras</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Buscar Operadoras</h1>
+        <input v-model="query" type="text" placeholder="Digite o nome fantasia">
+        <button @click="buscarOperadoras">Buscar</button>
+
+        <ul v-if="operadoras.length > 0">
+            <li v-for="operadora in operadoras" :key="operadora.Registro_ANS">
+                <strong>{{ operadora.Nome_Fantasia || 'Sem Nome Fantasia' }}</strong> - {{ operadora.Cidade }}/{{ operadora.UF }}
+            </li>
+        </ul>
+
+        <p v-if="operadoras.length === 0 && query.length > 0">Nenhuma operadora encontrada.</p>
+    </div>
+</body>
+</html>

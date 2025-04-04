@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "a564e28d-281e-4491-8150-22ac746f8d92",
+		"name": "interview test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12375904"
+	},
+	"item": [
+		{
+			"name": "Busca por Nome Fantasia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/buscar?nomeFantasia=ARTYODONTO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "nomeFantasia",
+							"value": "ARTYODONTO"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
